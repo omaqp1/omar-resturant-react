@@ -1,0 +1,424 @@
+.mainDivLoginSignin {
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.loginPage {
+  height: 100%;
+  background: linear-gradient(135deg, #f5f5f5 0%, #ffd699 100%);
+  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.loginPage::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 214, 153, 0.2) 0%, transparent 70%);
+  transform: rotate(30deg);
+  z-index: 0;
+}
+
+.loginPage.darkMode {
+  background: linear-gradient(135deg, #1a120b 0%, #ffb700 100%);
+  color: #fff;
+}
+
+.loginPage.darkMode::before {
+  background: radial-gradient(circle, rgba(255, 183, 0, 0.15) 0%, transparent 70%);
+}
+
+.container0 {
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.header {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 214, 153, 0.6) 120%);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(230, 115, 0, 0.1);
+  margin-bottom: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.header.darkMode {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(255, 183, 0, 0.4) 120%);
+  box-shadow: 0 8px 32px rgba(255, 183, 0, 0.1);
+  border: 1px solid rgba(255, 183, 0, 0.2);
+}
+
+.changeColor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: #ff9900;
+  text-decoration: underline;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  padding: 5px 15px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 153, 0, 0.3);
+}
+
+.loginPage.darkMode .logo {
+  color: #ffb700;
+  text-shadow: 0 0 10px rgba(255, 183, 0, 0.5);
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #afafaf;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background: linear-gradient(135deg, #ffffff 0%, #e6e6e6 100%);
+  transition: .4s;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+input:checked + .slider {
+  background: linear-gradient(135deg, #ffae00 0%, #ff7b00 100%);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+  background: linear-gradient(135deg, #fff9c4 0%, #ffecb3 100%);
+}
+
+.loginBox {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid rgba(255, 214, 153, 0.5);
+  backdrop-filter: blur(10px);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.loginBox::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 214, 153, 0.4) 0%, transparent 70%);
+  z-index: -1;
+}
+
+.loginBox::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 214, 153, 0.3) 0%, transparent 70%);
+  z-index: -1;
+}
+
+.loginBox:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(230, 115, 0, 0.25);
+}
+
+.loginPage.darkMode .loginBox {
+  background: rgba(30, 20, 10, 0.7);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 183, 0, 0.3);
+}
+
+.loginPage.darkMode .loginBox::before,
+.loginPage.darkMode .loginBox::after {
+  background: radial-gradient(circle, rgba(255, 183, 0, 0.3) 0%, transparent 70%);
+}
+
+.loginBox h1 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #e68a00;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.loginBox h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #ffae00, transparent);
+  border-radius: 2px;
+}
+
+.loginPage.darkMode .loginBox h1 {
+  color: #ffb700;
+}
+
+.userBox {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 15px 20px;
+  margin: 15px 0;
+  border: 2px solid #ffcc80;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.loginPage.darkMode .input {
+  background: rgba(50, 35, 15, 0.4);
+  border: 2px solid #ffbb00;
+  color: #fff;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.input:focus {
+  outline: none;
+  border-color: #ff9800;
+  box-shadow: 0 0 15px rgba(255, 152, 0, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.input::placeholder {
+  color: #b3b3b3;
+  transition: all 0.3s ease;
+}
+
+.input:focus::placeholder {
+  transform: translateY(-15px);
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.buttonBox {
+  margin: 30px 0;
+}
+
+.button {
+  background: linear-gradient(135deg, #ff9800 0%, #ffae00 100%);
+  color: white;
+  border: none;
+  padding: 16px 45px;
+  font-size: 1.15rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(230, 81, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #ffae00 0%, #ff9800 100%);
+  z-index: -1;
+  transition: transform 0.5s ease;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(230, 81, 0, 0.5);
+  letter-spacing: 1px;
+}
+
+.button:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.registerBox {
+  margin: 25px 0;
+  font-size: 1.1rem;
+  padding: 15px;
+  border-radius: 12px;
+  background: rgba(255, 214, 153, 0.2);
+}
+
+.loginPage.darkMode .registerBox {
+  background: rgba(255, 183, 0, 0.15);
+}
+
+.link {
+  color: #ff9900;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0 5px;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ffae00;
+  transition: width 0.3s ease;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+.loginPage.darkMode .link {
+  color: #ffb74d;
+}
+
+.link:hover {
+  color: #ffae00;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.socialIcon {
+  font-size: 2.2rem;
+  color: #ff9800;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 214, 153, 0.3);
+}
+
+.socialIcon:hover {
+  color: #ffae00;
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 5px 15px rgba(255, 153, 0, 0.3);
+}
+
+.loginPage.darkMode .socialIcon {
+  color: #ffb74d;
+  background: rgba(255, 183, 0, 0.2);
+}
+
+.loginPage.darkMode .socialIcon:hover {
+  color: #ff9800;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 40px;
+  color: #777;
+  font-size: 0.9rem;
+  padding: 15px;
+  border-top: 1px solid rgba(255, 214, 153, 0.3);
+}
+
+.loginPage.darkMode .copyright {
+  color: #aaa;
+  border-top: 1px solid rgba(255, 183, 0, 0.2);
+}
+
+.waveEffect {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="%23ffae00"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="%23ffae00"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%23ffae00"/></svg>');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+  opacity: 0.6;
+}
+
+.loginPage.darkMode .waveEffect {
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="%23ffb700"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="%23ffb700"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%23ffb700"/></svg>');
+  opacity: 0.3;
+}

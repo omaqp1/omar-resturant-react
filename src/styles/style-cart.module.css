@@ -1,0 +1,141 @@
+.header {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #ddd;
+}
+.table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+.pmain{
+  padding: 6px 0px;
+  border-radius: 15px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  background-color: #c0392b;
+}
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  font-size: 18px;
+}
+
+.table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.removeBtn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.removeBtn:hover {
+  background-color: #c0392b;
+}
+.cart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.cart h3{
+  font-size: 2.5rem;
+  color: #ffa600;
+  font-weight: bold;
+  text-shadow: #000000 -1px -1px 1px;
+}
+.cart h2{
+    font-size: 1.3rem;
+}
+.cart h2 a{
+  text-decoration: none;
+  color: #ffffff;
+  background-color: orange;
+  padding: 10px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8);
+}
+.cart h1{
+  font-size: 1.8rem;
+  color: rgb(255, 153, 0);
+  text-shadow: rgb(0, 0, 0) 1px 1px 1px;
+  font-weight: bold;
+  text-decoration: underline;
+  transition: all 0.12s ease-in-out;
+    
+}
+.cart h2 a:hover{
+  background-color: rgb(175, 114, 0);
+}
+
+.cartPage {
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  direction: rtl;
+}
+
+.cartContent {
+  margin-top: 20px;
+}
+
+.itemsSection h2 {
+  margin-bottom: 10px;
+
+}
+
+.itemsList {
+  list-style: none;
+  padding: 0;
+}
+
+.item {
+  background: #f0f0f0;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.checkoutSection {
+  margin-top: 30px;
+  text-align: center;
+}
+.checkoutSection h3{
+  text-shadow: #73ff00 0px 0px 30px;
+  font-size: 1.5rem;
+  color: #00c020;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.orderButton {
+  background-color: hsl(29, 100%, 50%);
+  color: white;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.1s;
+  margin-top: 20px;
+  width: 100%;
+  font-size: 2rem;
+}
+
+.orderButton:hover {
+  background-color: hsl(32, 100%, 44%);
+}
+.orderButton:active {
+  background-color: hsl(19, 100%, 50%);
+  transform: scale(0.95);
+  filter: blur(1px);
+}
